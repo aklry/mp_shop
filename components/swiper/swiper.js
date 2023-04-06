@@ -12,7 +12,7 @@ Component({
       type: Boolean,
       value: false
     },
-    inerval: {
+    interval: {
       type: Number,
       value: 5000
     },
