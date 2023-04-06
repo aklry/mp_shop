@@ -86,5 +86,13 @@ Page({
       page: this.data.page += 1
     })
     this.http(this.data.page)
+  },
+  /**
+   * 点击搜索框获取焦点
+   */
+  searchHandle() {
+    wx.navigateTo({
+      url: '/pages/search/search',
+    })
   }
 })
