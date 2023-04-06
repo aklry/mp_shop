@@ -1,4 +1,9 @@
 const { api } = require('../../api/index')
+/**
+ * 展示搜索数据的两种方案
+ * 1.在搜索页面通过网络请求获取数据，传递到页面显示
+ * 2.在搜索页面将搜索关键字传递到页面，在该页面做网络请求
+ */
 Page({
 
   /**
@@ -7,7 +12,8 @@ Page({
   data: {
     search: '',
     hotSearch: [],
-    value: ''
+    value: '',
+    goodsData: []
   },
 
   /**
@@ -24,7 +30,10 @@ Page({
    * 点击按钮实现搜索
    */
   onSearchClick() {
-    console.log(this.data.value)
+    this.http(this.data.value)
+    // wx.navigateTo({
+    //   url: `/pages/goods/goods?search=${this.data.value}`,
+    // })
   },
   /**
    * 内容改变
@@ -38,13 +47,39 @@ Page({
    * 回车实现搜索
    */
   onSearch(e) {
-    console.log(this.data.value)
+    this.http(this.data.value)
+    // wx.navigateTo({
+    //   url: `/pages/goods/goods?search=${this.data.value}`,
+    // })
   },
   /**
    * 获取热门关键字
    */
   searchByKeywords(e) {
     const { keywords } = e.currentTarget.dataset
-    console.log(keywords)
+    this.http(keywords)
+    // wx.navigateTo({
+    //   url: `/pages/goods/goods?search=${keywords}`
+    // })
+  },
+  http(search) {
+    api.getSearch({
+      search
+    }).then(res => {
+      if (!res.data.msg) {
+        // this.setData({
+        //   goods: res.data.data
+        // })
+        //序列化
+        let goods = JSON.stringify(res.data.data)
+        wx.navigateTo({
+          url: `/pages/goods/goods?goods=${goods}`
+        })
+      } else {
+        wx.showToast({
+          title: res.data.msg
+        })
+      }
+    }).catch(error => console.log(error))
   }
 })
