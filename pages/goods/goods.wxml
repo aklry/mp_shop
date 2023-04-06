@@ -1,0 +1,3 @@
+<view class="list">
+  <goods-list goodsData="{{ goods }}" />
+</view>
