@@ -3,13 +3,23 @@
  */
 const base = require('./base')
 const { request } = require('../utils/request')
-/**
- * get banner data
- */
-function getBanner() {
-  return request(base.baseURL + base.banner, 'GET', null)
+const api = {
+  /**
+   * get banner data
+   */
+  getBanner: function () {
+    return request(base.baseURL + base.banner, 'GET', null)
+  },
+  /**
+   * get goods data
+   */
+  getGoods: function(params) {
+    return request(base.baseURL + base.goods, 'GET', params)
+  }
 }
 
+
+
 module.exports = {
-  getBanner
+  api
 }
