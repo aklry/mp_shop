@@ -7,4 +7,5 @@ module.exports = {
   goods: '/api/goods',                //商品列表
   hotSearch: '/api/keywords',         //热词搜索
   search: '/api/goods/search',        //根据关键字搜索
+  goodsDetails: '/api/goods/details', //商品详情
 }

@@ -7,27 +7,37 @@ const api = {
   /**
    * get banner data
    */
-  getBanner: function (params) {
+  getBanner(params) {
     return request(base.baseURL + base.banner, 'GET', params)
   },
   /**
    * get goods data
    */
-  getGoods: function(params) {
+  getGoods(params) {
     return request(base.baseURL + base.goods, 'GET', params)
   },
 
   /**
    * hot search keywords
    */
-  getHotSearch: function(params) {
+  getHotSearch(params) {
     return request(base.baseURL + base.hotSearch, 'GET', params)
   },
+  /**
+   * 根据关键字查询商品
+   * @param {搜索关键字} params 
+   */
   getSearch(params) {
     return request(base.baseURL + base.search, 'GET', params)
+  },
+  /**
+   * 获取商品详情
+   * @param {商品id} params 
+   */
+  getGoodsDetails(params) {
+    return request(base.baseURL + base.goodsDetails, 'GET', params)
   }
 }
-
 
 
 module.exports = {
