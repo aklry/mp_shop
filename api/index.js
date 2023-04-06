@@ -49,6 +49,12 @@ const api = {
    */
   addCart(params) {
     return request(base.baseURL + base.addCart, 'GET', params)
+  },
+  /**
+   * 删除商品
+   */
+  delCart(params) {
+    return request(base.baseURL + base.delCart, 'GET', params)
   }
 }
 

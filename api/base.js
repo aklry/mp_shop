@@ -10,4 +10,5 @@ module.exports = {
   goodsDetails: '/api/goods/details', //商品详情
   showCart: '/api/cart',              //购物车展示
   addCart: '/api/cart/add',           //添加购物车
+  delCart: '/api/cart/del',           //删除商品
 }
