@@ -6,5 +6,12 @@
         background="#fa2c19" 
         placeholder="请输入搜索关键词" 
     />
+    <!-- 轮播图 -->
+    <swiper 
+      indicatorDots="{{ swiperOptions.indicatorDots}}"
+      autoplay="{{ swiperOptions.autoplay }}"
+      interval="{{ swiperOptions.interval }}"
+      duration="{{ swiperOptions.duration }}"
+   ></swiper>
   </view>
 </view>
