@@ -1,0 +1,16 @@
+<view class="details">
+  <block>
+    <image src="{{ goodsDetails.topimage }}" mode="widthFix" class="image"/>
+    <view class="content">
+      <view class="price">
+        ￥<text>{{ goodsDetails.price }}</text>.00
+      </view>
+      <view class="title">
+        <text>{{ goodsDetails.title }}</text>
+      </view>
+    </view>
+    <view class="introduce">
+      <image src="{{ goodsDetails.details }}" mode="widthFix"/>
+    </view>
+  </block>
+</view>
