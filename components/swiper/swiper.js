@@ -19,6 +19,14 @@ Component({
     duration: {
       type: Number,
       value: 500
+    },
+    circular: {
+      type: Boolean,
+      value: false
+    },
+    swiperData: {
+      type: Array,
+      value: []
     }
   },
 
