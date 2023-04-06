@@ -1,0 +1,15 @@
+<view class="swiper">
+  <swiper
+    class="mySwiper"
+    indicator-dots="{{ indicatorDots}}"
+    autoplay="{{ autoplay }}",
+    interval="{{ inerval}}"
+    duration="{{ duration }}"
+    indicator-color="#fff"
+    indicator-active-color="#fa2c19"
+  >
+    <siwper-item>
+      <image src="http://iwenwiki.com:3001/images/banner/1.jpg" mode="widthFix"/>
+    </siwper-item>
+  </swiper>
+</view>
