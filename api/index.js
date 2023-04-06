@@ -37,8 +37,18 @@ const api = {
   getGoodsDetails(params) {
     return request(base.baseURL + base.goodsDetails, 'GET', params)
   },
+  /**
+   * 展示购物车数据
+   * @param {*} params 
+   */
   getCart(params) {
     return request(base.baseURL + base.showCart, 'GET', params)
+  },
+  /**
+   * 添加购物车
+   */
+  addCart(params) {
+    return request(base.baseURL + base.addCart, 'GET', params)
   }
 }
 

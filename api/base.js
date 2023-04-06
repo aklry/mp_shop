@@ -8,5 +8,6 @@ module.exports = {
   hotSearch: '/api/keywords',         //热词搜索
   search: '/api/goods/search',        //根据关键字搜索
   goodsDetails: '/api/goods/details', //商品详情
-  showCart: '/api/cart',        //购物车展示
+  showCart: '/api/cart',              //购物车展示
+  addCart: '/api/cart/add',           //添加购物车
 }
