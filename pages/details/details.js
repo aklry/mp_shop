@@ -30,5 +30,29 @@ Page({
         })
       }
     }).catch(error => console.log(error))
+  },
+  /**
+   * 客服
+   */
+  onClickKF() {
+
+  },
+  /**
+   * 购物车
+   */
+  onClickCart() {
+
+  },
+  /**
+   * 加入购物车
+   */
+  onClickAddCart() {
+
+  },
+  /**
+   * 立即购买
+   */
+  onClickBuy() {
+
   }
 })
