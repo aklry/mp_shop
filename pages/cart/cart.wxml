@@ -2,7 +2,7 @@
   <view class="list">
     <van-swipe-cell right-width="{{ 65 }}" wx:for="{{ cartData }}" wx:key="index" wx:for-item="item">
       <van-card price="{{ item.price }}" title="{{ item.title }}" thumb="{{ item.image }}" />
-      <view slot="right" class="van-swipe-cell-right">删除</view>
+      <view data-id="{{ item.id }}" bindtap="delCartHandle" slot="right" class="van-swipe-cell-right">删除</view>
     </van-swipe-cell>
   </view>
 </view>
