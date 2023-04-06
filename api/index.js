@@ -22,6 +22,9 @@ const api = {
    */
   getHotSearch: function(params) {
     return request(base.baseURL + base.hotSearch, 'GET', params)
+  },
+  getSearch(params) {
+    return request(base.baseURL + base.search, 'GET', params)
   }
 }
 
