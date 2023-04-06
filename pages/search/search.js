@@ -1,66 +1,50 @@
-// pages/search/search.js
+const { api } = require('../../api/index')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    search: '',
+    hotSearch: [],
+    value: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    api.getHotSearch().then(res => {
+      this.setData({
+        hotSearch: res.data.data.result
+      })
+    }).catch(error => console.log(error))
   },
-
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 点击按钮实现搜索
    */
-  onReady() {
-
+  onSearchClick() {
+    console.log(this.data.value)
   },
-
   /**
-   * 生命周期函数--监听页面显示
+   * 内容改变
    */
-  onShow() {
-
+  onChange(e) {
+    this.setData({
+      value: e.detail
+    })
   },
-
   /**
-   * 生命周期函数--监听页面隐藏
+   * 回车实现搜索
    */
-  onHide() {
-
+  onSearch(e) {
+    console.log(this.data.value)
   },
-
   /**
-   * 生命周期函数--监听页面卸载
+   * 获取热门关键字
    */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  searchByKeywords(e) {
+    const { keywords } = e.currentTarget.dataset
+    console.log(keywords)
   }
 })
