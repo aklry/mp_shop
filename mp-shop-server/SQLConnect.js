@@ -1,8 +1,7 @@
 const mysql = require("mysql");
 const MySQLObj = {
-    host:"39.97.109.85",
     user:"root",
-    password:"910403",
+    password:"123456",
     database:"mpshop"
 }
 
