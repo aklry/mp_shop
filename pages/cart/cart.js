@@ -11,9 +11,9 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面加载
+   * 生命周期函数--每次打开页面，都会加载
    */
-  onLoad(options) {
+  onShow(options) {
     api.getCart().then(res => {
       if (res.data.status === 200) {
         this.setData({
