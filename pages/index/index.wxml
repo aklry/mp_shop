@@ -1,19 +1,17 @@
 <view class="index-container">
   <view class="header">
-    <van-search 
-        value="{{ value }}" 
-        shape="round" 
-        background="#fa2c19" 
-        placeholder="请输入搜索关键词" 
-    />
+    <van-search value="{{ value }}" shape="round" background="#fa2c19" placeholder="请输入搜索关键词" />
     <!-- 轮播图 -->
-    <swiper 
-      indicatorDots="{{ swiperOptions.indicatorDots}}"
-      autoplay="{{ swiperOptions.autoplay }}"
-      interval="{{ swiperOptions.interval }}"
-      duration="{{ swiperOptions.duration }}"
-      circular="{{ swiperOptions.circular }}"
-      swiperData="{{ swiperData }}"
-   ></swiper>
+    <swiper indicatorDots="{{ swiperOptions.indicatorDots}}" autoplay="{{ swiperOptions.autoplay }}" interval="{{ swiperOptions.interval }}" duration="{{ swiperOptions.duration }}" circular="{{ swiperOptions.circular }}" swiperData="{{ swiperData }}"></swiper>
+  </view>
+
+  <view class="nav">
+    <van-grid column-num="4">
+      <van-grid-item icon-color="{{ item.color }}" icon="{{ item.icon }}" text="{{ item.text }}" wx:for="{{ navData }}" wx:for-item="item" wx:key="index" />
+    </van-grid>
+  </view>
+
+  <view class="list">
+    <goods-list goodsData="{{ goodsData }}" />
   </view>
 </view>
