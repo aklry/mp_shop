@@ -36,6 +36,9 @@ const api = {
    */
   getGoodsDetails(params) {
     return request(base.baseURL + base.goodsDetails, 'GET', params)
+  },
+  getCart(params) {
+    return request(base.baseURL + base.showCart, 'GET', params)
   }
 }
 
