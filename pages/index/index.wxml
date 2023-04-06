@@ -12,6 +12,8 @@
       autoplay="{{ swiperOptions.autoplay }}"
       interval="{{ swiperOptions.interval }}"
       duration="{{ swiperOptions.duration }}"
+      circular="{{ swiperOptions.circular }}"
+      swiperData="{{ swiperData }}"
    ></swiper>
   </view>
 </view>
