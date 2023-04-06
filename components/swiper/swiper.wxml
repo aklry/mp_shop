@@ -2,7 +2,7 @@
   <swiper
     class="mySwiper"
     indicator-dots="{{ indicatorDots}}"
-    autoplay="{{ autoplay }}",
+    autoplay="{{ autoplay }}"
     interval="{{ inerval}}"
     duration="{{ duration }}"
     indicator-color="#fff"
