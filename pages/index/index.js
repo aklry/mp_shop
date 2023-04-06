@@ -1,6 +1,6 @@
 Page({
   data: {
-   
+    value: ''
   },
   onLoad() {
     
