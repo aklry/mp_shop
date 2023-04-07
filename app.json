@@ -6,7 +6,8 @@
     "pages/user/user",
     "pages/search/search",
     "pages/goods/goods",
-    "pages/details/details"
+    "pages/details/details",
+    "pages/buy/buy"
   ],
   "window":{
     "backgroundTextStyle":"light",
