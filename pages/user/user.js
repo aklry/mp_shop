@@ -5,7 +5,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+    userInfo: {},
+    list: [
+      {
+        text: '前端',
+        icon: 'like',
+        color: '#ff0000'
+      },
+      {
+        text: 'Python',
+        icon: 'star',
+        color: '#fd6012'
+      },
+      {
+        text: 'Java',
+        icon: 'fire',
+        color: '#fd4d72'
+      },
+      {
+        text: '大数据',
+        icon: 'gem',
+        color: '#ff0000'
+      },
+      {
+        text: '人工智能',
+        icon: 'gift',
+        color: '#00b478'
+      },
+      {
+        text: '算法',
+        icon: 'shop',
+        color: '#fe391f'
+      },
+    ]
   },
 
   /**

@@ -1,11 +1,16 @@
 <view class="user-container">
   <view class="header">
     <view wx:if="{{ userInfo.nickName }}">
-      <image src="{{ userInfo.avatarUrl }}" mode="widthFix"/>
+      <image src="{{ userInfo.avatarUrl }}" mode="widthFix" />
       <text>{{ userInfo.nickName }}</text>
     </view>
     <view wx:else>
       <van-button type="primary" bindtap="getUserProfile">登录</van-button>
     </view>
+  </view>
+  <view class="service">
+    <van-grid column-num="3">
+      <van-grid-item wx:for="{{ list }}" wx:key="index" icon-color="{{ item.color }}" icon="{{ item.icon }}" text="{{ item.text }}" />
+    </van-grid>
   </view>
 </view>
