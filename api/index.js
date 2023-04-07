@@ -55,6 +55,9 @@ const api = {
    */
   delCart(params) {
     return request(base.baseURL + base.delCart, 'GET', params)
+  },
+  getCategory(params) {
+    return request(base.baseURL + base.category, 'GET', params)
   }
 }
 

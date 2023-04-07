@@ -11,4 +11,5 @@ module.exports = {
   showCart: '/api/cart',              //购物车展示
   addCart: '/api/cart/add',           //添加购物车
   delCart: '/api/cart/del',           //删除商品
+  category: '/api/category',          //商品分类
 }
