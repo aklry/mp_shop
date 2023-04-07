@@ -13,4 +13,5 @@ module.exports = {
   delCart: '/api/cart/del',           //删除商品
   category: '/api/category',          //商品分类
   buy: '/api/buy',                    //购买商品查询
+  login: '/api/login'                 //登录
 }

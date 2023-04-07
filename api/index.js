@@ -69,6 +69,12 @@ const api = {
    */
   getBuyDetails(params) {
     return request(base.baseURL + base.buy, 'GET', params)
+  },
+  /**
+   * 登录
+   */
+  login(params) {
+    return request(base.baseURL + base.login, 'POST', params)
   }
 }
 
