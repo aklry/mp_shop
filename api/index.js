@@ -56,8 +56,19 @@ const api = {
   delCart(params) {
     return request(base.baseURL + base.delCart, 'GET', params)
   },
+  /**
+   * 查询商品具体分类
+   * @param {商品分类} params 
+   */
   getCategory(params) {
     return request(base.baseURL + base.category, 'GET', params)
+  },
+  /**
+   * 购买商品查询
+   * @param {商品id} params
+   */
+  getBuyDetails(params) {
+    return request(base.baseURL + base.buy, 'GET', params)
   }
 }
 
