@@ -1,2 +1,11 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="user-container">
+  <view class="header">
+    <view wx:if="{{ userInfo.nickName }}">
+      <image src="{{ userInfo.avatarUrl }}" mode="widthFix"/>
+      <text>{{ userInfo.nickName }}</text>
+    </view>
+    <view wx:else>
+      <van-button type="primary" bindtap="getUserProfile">登录</van-button>
+    </view>
+  </view>
+</view>
