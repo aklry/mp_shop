@@ -71,7 +71,10 @@ Page({
   /**
    * 立即购买
    */
-  onClickBuy() {
-
+  onClickBuy(e) {
+    const { id } = e.currentTarget.dataset
+    wx.navigateTo({
+      url: `/pages/buy/buy?id=${id}`
+    })
   }
 })
