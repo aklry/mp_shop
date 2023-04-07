@@ -4,8 +4,8 @@ const SQLConnect = require("./SQLConnect.js");
 const url = require("url");
 const request = require("request");
 const authorization_code = "itbaizhan"
-const appid = "wxe4135ba344b525f4"
-const secret = "a3e4a228cf68dbd055f63487352b582b"
+const appid = "wx9132c81e896dcaa7"
+const secret = "46bad87e74aeaefd10a3f50ad8a39343"
 
 
 /**
@@ -236,8 +236,10 @@ router.get("/category", (req, res) => {
 
 router.post("/login", (req, res) => {
     const { code } = req.body;
+    console.log(code)
     request(`https://api.weixin.qq.com/sns/jscode2session?appid=${appid}&secret=${secret}&js_code=${code}&grant_type=${authorization_code}`, (err, response, body) => {
         if (err) console.log(err);
+        console.log(body)
         const data = JSON.parse(body);
         /**
          * 签名校验以及数据加解密涉及用户的会话密钥session_key。 需要保存在服务器
