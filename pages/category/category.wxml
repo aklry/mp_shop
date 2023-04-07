@@ -1,2 +1,21 @@
-<!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view>
+  <view class="left-nav">
+    <block wx:for="{{ slideData }}" wx:key="id">
+      <van-sidebar active-key="{{ activeKey }}">
+        <van-sidebar-item data-title="{{ item.text }}" bindtap="clickNavItem" title="{{ item.text }}" />
+      </van-sidebar>
+    </block>
+  </view>
+  <view>
+    <view class="right-nav">
+      <van-grid column-num="3">
+        <van-grid-item use-slot wx:for="{{ categoryData }}" wx:for-item="item" wx:key="id">
+          <view bindtap="clickItemSearch" data-tag="{{ item.tag }}">
+            <image src="{{ item.image }}" mode="widthFix"/>
+            <text>{{ item.tag }}</text>
+          </view>
+        </van-grid-item>
+      </van-grid>
+    </view>
+  </view>
+</view>
