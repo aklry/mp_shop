@@ -10,7 +10,7 @@ function request(url, method = 'GET', data) {
       method,
       data,
       header: {
-        'content-type': 'application/json'
+        'content-type': 'application/x-www-form-urlencoded'
       },
       success(res) {
         resolve(res)
